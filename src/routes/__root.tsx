@@ -29,10 +29,21 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Magi BD — Prestigious Rankings & Lists" },
-      { name: "description", content: "The definitive ranking platform for influential and notable people across various categories." },
+      { name: "description", content: "Magi BD র‍্যাঙ্কিং  
+বাংলাদেশের সবচেয়ে সেক্সি ও অশ্লীল পর্ণস্টারদের লিস্ট।  
+Top = সবচেয়ে বেশি চোদনপ্রিয়।" },
       { property: "og:title", content: "Magi BD — Prestigious Rankings & Lists" },
-      { property: "og:description", content: "The definitive ranking platform for influential and notable people across various categories." },
+      { property: "og:description", content: "Magi BD র‍্যাঙ্কিং  
+বাংলাদেশের সবচেয়ে সেক্সি ও অশ্লীল পর্ণস্টারদের লিস্ট।  
+Top = সবচেয়ে বেশি চোদনপ্রিয়।" },
       { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Magi BD — Prestigious Rankings & Lists" },
+      { name: "twitter:description", content: "Magi BD র‍্যাঙ্কিং  
+বাংলাদেশের সবচেয়ে সেক্সি ও অশ্লীল পর্ণস্টারদের লিস্ট।  
+Top = সবচেয়ে বেশি চোদনপ্রিয়।" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/4UbGQbwFkdbYt5GWgxpjBvnt6Ho2/social-images/social-1776341475096-image-5.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/4UbGQbwFkdbYt5GWgxpjBvnt6Ho2/social-images/social-1776341475096-image-5.webp" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
