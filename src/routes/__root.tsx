@@ -41,8 +41,6 @@ Top = সবচেয়ে বেশি চোদনপ্রিয়।" },
       { name: "twitter:description", content: "Magi BD র‍্যাঙ্কিং  
 বাংলাদেশের সবচেয়ে সেক্সি ও অশ্লীল পর্ণস্টারদের লিস্ট।  
 Top = সবচেয়ে বেশি চোদনপ্রিয়।" },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/4UbGQbwFkdbYt5GWgxpjBvnt6Ho2/social-images/social-1776341475096-image-5.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/4UbGQbwFkdbYt5GWgxpjBvnt6Ho2/social-images/social-1776341475096-image-5.webp" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
