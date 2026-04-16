@@ -14,7 +14,206 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      categories: {
+        Row: {
+          created_at: string
+          description: string | null
+          display_order: number
+          icon: string | null
+          id: string
+          name: string
+          slug: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          display_order?: number
+          icon?: string | null
+          id?: string
+          name: string
+          slug: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          display_order?: number
+          icon?: string | null
+          id?: string
+          name?: string
+          slug?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      people: {
+        Row: {
+          achievements: string[] | null
+          age: number | null
+          country: string | null
+          created_at: string
+          custom_stats: Json | null
+          full_description: string | null
+          full_name: string
+          id: string
+          photo_url: string | null
+          short_bio: string | null
+          slug: string
+          updated_at: string
+        }
+        Insert: {
+          achievements?: string[] | null
+          age?: number | null
+          country?: string | null
+          created_at?: string
+          custom_stats?: Json | null
+          full_description?: string | null
+          full_name: string
+          id?: string
+          photo_url?: string | null
+          short_bio?: string | null
+          slug: string
+          updated_at?: string
+        }
+        Update: {
+          achievements?: string[] | null
+          age?: number | null
+          country?: string | null
+          created_at?: string
+          custom_stats?: Json | null
+          full_description?: string | null
+          full_name?: string
+          id?: string
+          photo_url?: string | null
+          short_bio?: string | null
+          slug?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      people_categories: {
+        Row: {
+          category_id: string
+          id: string
+          person_id: string
+        }
+        Insert: {
+          category_id: string
+          id?: string
+          person_id: string
+        }
+        Update: {
+          category_id?: string
+          id?: string
+          person_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "people_categories_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "categories"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "people_categories_person_id_fkey"
+            columns: ["person_id"]
+            isOneToOne: false
+            referencedRelation: "people"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      ranking_entries: {
+        Row: {
+          created_at: string
+          id: string
+          person_id: string
+          rank_position: number
+          ranking_list_id: string
+          score: number | null
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          person_id: string
+          rank_position: number
+          ranking_list_id: string
+          score?: number | null
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          person_id?: string
+          rank_position?: number
+          ranking_list_id?: string
+          score?: number | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ranking_entries_person_id_fkey"
+            columns: ["person_id"]
+            isOneToOne: false
+            referencedRelation: "people"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "ranking_entries_ranking_list_id_fkey"
+            columns: ["ranking_list_id"]
+            isOneToOne: false
+            referencedRelation: "ranking_lists"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      ranking_lists: {
+        Row: {
+          category_id: string
+          created_at: string
+          description: string | null
+          id: string
+          is_featured: boolean
+          list_size: number
+          slug: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          category_id: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_featured?: boolean
+          list_size?: number
+          slug: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          category_id?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          is_featured?: boolean
+          list_size?: number
+          slug?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ranking_lists_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "categories"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
